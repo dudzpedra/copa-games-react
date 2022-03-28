@@ -1,0 +1,29 @@
+
+.all-games-list {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+    width: 95%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  
+  .game-card, .game-selected {
+    border-radius: 10px;
+    box-shadow: 0 1px 2px 0;
+    width: 80%;
+    margin: 1rem auto;
+    padding: 1rem;
+  }
+  .game-selected {
+    background-color: aquamarine;
+    transform: scale(1.1);
+  }
+  .game-card:hover {
+    background-color: aquamarine;
+  }
+  
+  .all-games-list button {
+    width: 40%;
+    margin: 0 auto;
+  }

@@ -1,0 +1,22 @@
+header {
+  display: flex;
+  place-items: center;
+  box-shadow: 0 0 1px 0;
+}
+
+header div {
+  width: 50%;
+  margin: 1rem auto;
+}
+
+header nav {
+  display: flex;
+  margin: 1rem auto;
+  width: 40%;
+}
+
+header a {
+  width: 20%;
+  margin: 1rem auto;
+  justify-items: center;
+}
