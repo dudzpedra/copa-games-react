@@ -1,0 +1,13 @@
+.socialContainer {
+    display: flex;
+    flex-direction: row;
+    width: 20%;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+@media (max-width: 375px) {
+    .socialContainer {
+        display: none;
+    }
+}

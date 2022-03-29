@@ -31,7 +31,7 @@ const Instructions = () => {
         <div>
           <h2>2. Select {amount} games:</h2>
           <h3>
-            {length} of {amount} selected
+            {length} of {amount ? amount : '0'} selected
           </h3>
         </div>
         {amount === length && (

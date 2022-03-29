@@ -9,6 +9,7 @@ import { Button } from "@mui/material";
 const GamesList = () => {
   const dispatch = useDispatch();
   const allGames = useSelector((state) => state.games.allGames);
+
   const getData = async () => {
     const data = await fetchData();
     dispatch(gamesActions.setAllGames(data));
@@ -27,7 +28,7 @@ const GamesList = () => {
       {allGames.map((item) => (
         <div key={item.id}>
           <GameCard item={item}>
-            <Button variant="outlined" onClick={() => handleSelect(item)}>
+            <Button variant="outlined" size="small" onClick={() => handleSelect(item)}>
               SELECT
             </Button>
           </GameCard>

@@ -1,17 +1,14 @@
-import { Link } from "react-router-dom";
+import Menu from "../Menu";
+import NavBar from "../NavBar";
+import Social from "../Social";
 import "./Header.module.css";
-import lambda3 from '../../../assets/lambda3.svg'
 
 const Header = () => {
   return (
     <header>
-      <Link to="/">
-        <img src={lambda3} alt="Logo Lambda3" id="header-logo"/>
-      </Link>
-      <nav>
-        <Link to="/about">About</Link>
-        <Link to="/contact">Contact</Link>
-      </nav>
+      <NavBar />
+      <Social />
+      <Menu />
     </header>
   );
 };

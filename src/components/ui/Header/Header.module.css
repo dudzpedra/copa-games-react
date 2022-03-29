@@ -1,31 +1,7 @@
 header {
-  display: flex;
-  box-shadow: 0 0 1px 0;
-  box-shadow: 0 4px 56px rgba(0, 0, 0, 0.1);
   width: 100%;
-  align-items: center;
-  background-color: rgba(51, 77, 128, 1);;
-}
-
-a {
-  color: #fff;
-  text-decoration: none;
-}
-
-header a {
-  width: 20%;
-  margin: 1rem auto;
-}
-
-header nav {
   display: flex;
-  margin: 0 auto;
-  width: 50%;
-}
-
-nav a:hover {
-  border-bottom: 2px solid white;
-  opacity: 0.9;
-  color: #37D2A9;
-  transition: all ease-in 1s;
+  flex-direction: row;
+  justify-content: space-between;
+  box-shadow: 0px 4px 56px rgba(0, 0, 0, 0.1);
 }

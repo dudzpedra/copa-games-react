@@ -1,0 +1,25 @@
+.navbarContainer {
+    width: 40%;
+    display: flex;
+    flex-direction: row;
+    padding: 1rem 3rem;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbarContainer a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.navbarContainer nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width: 60%;
+}
+
+@media (max-width: 375px) {
+    .navbarContainer nav {
+        display: none;
+    }
+}

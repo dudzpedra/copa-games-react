@@ -1,0 +1,9 @@
+.menuContainer {
+    display: none;
+}
+
+@media (max-width: 375px) {
+    .menuContainer {
+        display: block;
+    }
+}
