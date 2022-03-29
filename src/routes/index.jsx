@@ -6,6 +6,7 @@ import Contact from "./contact";
 import Home from "./home";
 import Selected from "./selected";
 import Winners from "./winners";
+import Results from "./results";
 
 const AppRoutes = () => {
   return (
@@ -17,6 +18,7 @@ const AppRoutes = () => {
           <Route path="contact" element={<Contact />} />
           <Route path="games" element={<Games />} />
           <Route path="selected" element={<Selected />} />
+          <Route path="results" element={<Results />} />
           <Route path="winners" element={<Winners />} />
         </Route>
       </Routes>

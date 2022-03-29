@@ -14,7 +14,7 @@ const Selected = () => {
 
   return (
     <div className="container">
-      <Link to='/winners'>
+      <Link to='/results'>
         <UIButton text='START COMPETITION' onClick={handleStart}/>
       </Link>
       <Grid>

@@ -1,5 +1,6 @@
 .card, .selected {
   width: 80%;
+  max-width: 300px;
   margin: 1rem auto;
   padding: 1rem;
   background: #b6c0ce;
