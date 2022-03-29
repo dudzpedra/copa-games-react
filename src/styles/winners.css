@@ -3,8 +3,12 @@
   flex-direction: column;
 }
 
+#winner-title {
+  margin: 2rem;
+}
+
 .winners {
-  width: 50%;
+  max-width: 90%;
   margin: 1rem auto;
   display: flex;
   flex-direction: row;
@@ -18,16 +22,26 @@
 
 #star1 {
   position: absolute;
-  top: -46px;
-  left: -1%;
-  width: 92px;
-  height: 92px;
+  top: -10%;
+  left: 10%;
+  width: 60px;
 }
 
 #star2 {
   width: 60px;
   height: 60px;
   position: absolute;
-  top: -30px;
-  left: 2%;
+  top: -10%;
+  left: 5%;
+}
+
+@media (max-width: 375px) {
+  #star1 {
+    width: 60px;
+    left: 0;
+  }
+  #star2 {
+    width: 40px;
+    left: -4%;
+  }
 }

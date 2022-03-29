@@ -3,12 +3,12 @@
     flex-direction: row;
     position: relative;
     height: 100vh;
-    width: 100%;
+    width: 100vw;
 }
 
 .info {
-    width: 30%;
-    margin-left: 10%;
+    max-width: 45%;
+    margin-left: 5%;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -19,5 +19,9 @@
     position: absolute;
     top: 0;
     right: 0;
-    z-index: 0;
+    max-width: 45%;
+}
+
+@media (max-width: 375px) {
+    
 }

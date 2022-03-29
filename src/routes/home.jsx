@@ -7,6 +7,7 @@ import marca from '../assets/marca.svg'
 const Home = () => {
   return (
     <div className='home-container'>
+      <img src={logo} alt="Copa Games Logo" id="logo" />
       <div className='info'>
         <h1>Boas vindas a</h1>
         <img src={marca} alt="Marca Copa Games" id="marca" />
@@ -20,7 +21,6 @@ const Home = () => {
           <UIButton text='START' />
         </Link>
       </div>
-      <img src={logo} alt="Copa Games Logo" id="logo" />
     </div>
   );
 };

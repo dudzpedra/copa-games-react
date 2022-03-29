@@ -1,14 +1,9 @@
-import styles from './Instructions.module.css'
-import {
-  FormControl,
-  InputLabel,
-  Select,
-  MenuItem,
-} from "@mui/material";
+import styles from "./Instructions.module.css";
+import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { gamesActions } from "../../store/features/gamesSlice";
-import UIButton from '../ui/UIButton';
+import UIButton from "../ui/UIButton";
 
 const Instructions = () => {
   const dispatch = useDispatch();
@@ -32,15 +27,19 @@ const Instructions = () => {
           <MenuItem value={8}>8 Games</MenuItem>
         </Select>
       </FormControl>
-      <h2>2. Select {amount} games:</h2>
-      <h3>
-        {length} of {amount} selected
-      </h3>
-      {amount === length && (
-        <Link to="/selected">
-          <UIButton text='SUBMIT GAMES'/>
-        </Link>
-      )}
+      <div className={styles.instructionsSelect}>
+        <div>
+          <h2>2. Select {amount} games:</h2>
+          <h3>
+            {length} of {amount} selected
+          </h3>
+        </div>
+        {amount === length && (
+          <Link to="/selected">
+            <UIButton text="SUBMIT GAMES" />
+          </Link>
+        )}
+      </div>
     </div>
   );
 };
