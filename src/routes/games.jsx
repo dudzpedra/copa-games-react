@@ -1,11 +1,11 @@
-import { Link } from "react-router-dom";
 import GamesList from "../components/GamesList";
+import Instructions from "../components/Instructions";
 
 const Games = () => {
   return (
     <div>
+      <Instructions/>
       <GamesList />
-      <Link to="/selected">SUBMIT GAMES</Link>
     </div>
   );
 };

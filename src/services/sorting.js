@@ -4,7 +4,15 @@ export const sortByName = (list) => {
 
 const sortAllCriteria = (list) =>
   [...list].sort((a, b) =>
-    (a.nota > b.nota) ? -1 : (a.nota === b.nota) ? (a.ano > b.ano) ? -1 : (a.ano === b.ano) ? -1 : 1 : 1
+    a.nota > b.nota
+      ? -1
+      : a.nota === b.nota
+      ? a.ano > b.ano
+        ? -1
+        : a.ano === b.ano
+        ? -1
+        : 1
+      : 1
   );
 
 export const sortGames = (list) => {
@@ -16,15 +24,17 @@ export const sortGames = (list) => {
       orderedByTitle[i],
       orderedByTitle[orderedByTitle.length - (i + 1)],
     ];
-    const match = sortAllCriteria(games);
-    semiFinals.push(match[0]);
+    const results = sortAllCriteria(games);
+    semiFinals.push(results[0]);
   }
-  console.log("semi finals", semiFinals);
-  for (let i = 0; i <= semiFinals.length / 2; i += 2) {
-    const games = [semiFinals[i], semiFinals[i + 1]];
-    const match = sortAllCriteria(games);
-    finals.push(match[0]);
+  if (orderedByTitle.length === 4) {
+    return sortAllCriteria(semiFinals);
+  } else {
+    for (let i = 0; i <= semiFinals.length / 2; i += 2) {
+      const games = [semiFinals[i], semiFinals[i + 1]];
+      const results = sortAllCriteria(games);
+      finals.push(results[0]);
+    }
+    return sortAllCriteria(finals);
   }
-  console.log("finals", finals);
-  return finals;
 };

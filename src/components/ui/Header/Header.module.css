@@ -2,6 +2,11 @@ header {
   display: flex;
   place-items: center;
   box-shadow: 0 0 1px 0;
+  box-shadow: 0 4px 56px rgba(0, 0, 0, 0.1);
+}
+
+a {
+  color: #fff;
 }
 
 header div {

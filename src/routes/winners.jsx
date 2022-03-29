@@ -1,14 +1,13 @@
+import '../styles/winners.css'
 import { useSelector } from "react-redux";
 import GameCard from "../components/GameCard/index";
-import Grid from "../components/ui/Grid";
 
 const Winners = () => {
   const winner = useSelector((state) => state.games.winner);
   const vice = useSelector((state) => state.games.vice);
 
   return (
-    <div>
-      <Grid>
+    <div className='winners'>
         <div>
           <h2>WINNER</h2>
           <GameCard item={winner} />
@@ -17,7 +16,6 @@ const Winners = () => {
           <h2>VICE</h2>
           <GameCard item={vice} />
         </div>
-      </Grid>
     </div>
   );
 };

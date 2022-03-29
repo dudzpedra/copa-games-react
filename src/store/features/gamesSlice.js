@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { sortByName, sortGames } from "../../services/sorting";
+import { sortGames } from "../../services/sorting";
 
 const initialState = {
-    amount: 8,
+    amount: 0,
     allGames: [],
     selectedGames: [],
     winner: {},
@@ -13,6 +13,9 @@ const gamesSlice = createSlice({
     name: 'games',
     initialState,
     reducers: {
+        setAmount (state, action) {
+            state.amount = action.payload
+        },
         setAllGames (state, action) {
             state.allGames = action.payload
         },
@@ -21,9 +24,6 @@ const gamesSlice = createSlice({
             if (!existingGame) {
                 state.selectedGames.push(action.payload)
             }
-        },
-        sortByName (state,action) {
-            state.selectedGames = sortByName(state.selectedGames)
         },
         sortGames (state, action) {
             const winners = sortGames(state.selectedGames)

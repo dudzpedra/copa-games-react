@@ -4,6 +4,7 @@ import { useEffect } from "react";
 import { gamesActions } from "../../store/features/gamesSlice";
 import fetchData from "../../services/api";
 import GameCard from "../GameCard";
+import { Button } from "@mui/material";
 
 const GamesList = () => {
   const dispatch = useDispatch();
@@ -25,7 +26,8 @@ const GamesList = () => {
     <Grid>
       {allGames.map((item) => (
         <div key={item.id}>
-          <GameCard item={item} onClick={() => handleSelect(item)} />
+          <GameCard item={item} />
+          <Button variant="outlined" onClick={() => handleSelect(item)}>SELECT</Button>
         </div>
       ))}
     </Grid>
