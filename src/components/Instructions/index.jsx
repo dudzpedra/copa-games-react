@@ -4,11 +4,11 @@ import {
   InputLabel,
   Select,
   MenuItem,
-  Button,
 } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
 import { gamesActions } from "../../store/features/gamesSlice";
+import UIButton from '../ui/UIButton';
 
 const Instructions = () => {
   const dispatch = useDispatch();
@@ -38,7 +38,7 @@ const Instructions = () => {
       </h3>
       {amount === length && (
         <Link to="/selected">
-          <Button variant="outlined">SUBMIT GAMES</Button>
+          <UIButton text='SUBMIT GAMES'/>
         </Link>
       )}
     </div>

@@ -1,7 +1,7 @@
 import { useSelector } from 'react-redux';
 import styles from './GameCard.module.css'
 
-const GameCard = ({ item }) => {
+const GameCard = ({ item, children }) => {
   const selectedGames = useSelector(state => state.games.selectedGames)
   const isSelected = selectedGames.find(game => game.id === item.id)
   return (
@@ -10,6 +10,7 @@ const GameCard = ({ item }) => {
       <p>{item.titulo}</p>
       <p>{item.ano}</p>
       <p>Nota: {item.nota}</p>
+      {children}
     </div>
   );
 };

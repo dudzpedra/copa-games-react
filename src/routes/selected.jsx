@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import Grid from "../components/ui/Grid";
 import { gamesActions } from "../store/features/gamesSlice";
 import GameCard from '../components/GameCard/index'
-import { Button } from "@mui/material";
+import UIButton from '../components/ui/UIButton';
 
 const Selected = () => {
   const dispatch = useDispatch();
@@ -15,7 +15,7 @@ const Selected = () => {
   return (
     <div className="container">
       <Link to='/winners'>
-        <Button variant="contained" onClick={handleStart}>Start Competition</Button>
+        <UIButton text='START COMPETITION' onClick={handleStart}/>
       </Link>
       <Grid>
         {selectedGames.map((item) => (

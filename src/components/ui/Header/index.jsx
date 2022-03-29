@@ -1,14 +1,14 @@
 import { Link } from "react-router-dom";
 import "./Header.module.css";
+import lambda3 from '../../../assets/lambda3.svg'
 
 const Header = () => {
   return (
     <header>
       <Link to="/">
-        <h2>Copa Games 2.0</h2>
+        <img src={lambda3} alt="Logo Lambda3" />
       </Link>
       <nav>
-        <Link to="/games">Games</Link>
         <Link to="/about">About</Link>
         <Link to="/contact">Contact</Link>
       </nav>

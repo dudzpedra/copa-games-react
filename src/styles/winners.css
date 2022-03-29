@@ -1,4 +1,33 @@
+.winners-container {
+  display: flex;
+  flex-direction: column;
+}
+
 .winners {
-    width: 50%;
-    margin: 1rem auto;
+  width: 50%;
+  margin: 1rem auto;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.winner-card,
+.vice-card {
+  position: relative;
+}
+
+#star1 {
+  position: absolute;
+  top: -46px;
+  left: -1%;
+  width: 92px;
+  height: 92px;
+}
+
+#star2 {
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  top: -30px;
+  left: 2%;
 }

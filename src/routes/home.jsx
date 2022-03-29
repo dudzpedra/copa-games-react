@@ -1,14 +1,15 @@
 import "../styles/home.css";
 import { Link } from "react-router-dom";
-import { Button } from "@mui/material";
-import logo from '../assets/logo.png'
+import logo from '../assets/logo.svg'
+import UIButton from "../components/ui/UIButton";
+import marca from '../assets/marca.svg'
 
 const Home = () => {
   return (
-    <div className='container'>
+    <div className='home-container'>
       <div className='info'>
-        <h2>Boas vindas a</h2>
-        <h1>Copa Games</h1>
+        <h1>Boas vindas a</h1>
+        <img src={marca} alt="Marca Copa Games" id="marca" />
         <p>
           A Lambda3 está organizando uma Copa do Mundo de games, e precisamos de
           sua ajuda para determinar quais gamesestarão no pódio e quem é o
@@ -16,10 +17,10 @@ const Home = () => {
           com a nota do público para cada um dos games.
         </p>
         <Link to="/games">
-          <Button variant="contained">START</Button>
+          <UIButton text='START' />
         </Link>
       </div>
-      <img src={logo} alt="Copa Games Logo" />
+      <img src={logo} alt="Copa Games Logo" id="logo" />
     </div>
   );
 };

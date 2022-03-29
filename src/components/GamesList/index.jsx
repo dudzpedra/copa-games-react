@@ -26,8 +26,11 @@ const GamesList = () => {
     <Grid>
       {allGames.map((item) => (
         <div key={item.id}>
-          <GameCard item={item} />
-          <Button variant="outlined" onClick={() => handleSelect(item)}>SELECT</Button>
+          <GameCard item={item}>
+            <Button variant="outlined" onClick={() => handleSelect(item)}>
+              SELECT
+            </Button>
+          </GameCard>
         </div>
       ))}
     </Grid>
