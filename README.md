@@ -6,7 +6,7 @@ This project was developed with React and some other technologies:
 - Material UI library
 - Figma
 - react-router-dom library
-- ESLint
+- Jest and react-testing-library unit tests
 - AWS Amplify
 
 ## Demo
