@@ -14,7 +14,7 @@ describe("GameCard testing", () => {
 
   render(<GameCard item={item} />);
 
-  it("render content", () => {
+  test("render content", () => {
     const title = screen.getByText("Grand Theft Auto IV (PS3)");
     expect(title).toBeDefined();
     const imgAlt = screen.getByAltText("Grand Theft Auto IV (PS3)");

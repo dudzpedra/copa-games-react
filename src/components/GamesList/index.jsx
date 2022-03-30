@@ -4,7 +4,7 @@ import { useEffect } from "react";
 import { gamesActions } from "../../store/features/gamesSlice";
 import fetchData from "../../services/api";
 import GameCard from "../GameCard";
-import { Button } from "@mui/material";
+import UIButton from "../ui/UIButton";
 
 const GamesList = () => {
   const dispatch = useDispatch();
@@ -28,9 +28,7 @@ const GamesList = () => {
       {allGames.map((item) => (
         <div key={item.id}>
           <GameCard item={item}>
-            <Button variant="outlined" size="small" onClick={() => handleSelect(item)}>
-              SELECT
-            </Button>
+            <UIButton text='SELECT' onClick={() => handleSelect(item)} />
           </GameCard>
         </div>
       ))}
