@@ -1,4 +1,4 @@
-import Menu from "../Menu";
+import BurgerMenu from "../BurgerMenu";
 import NavBar from "../NavBar";
 import Social from "../Social";
 import "./Header.module.css";
@@ -8,7 +8,7 @@ const Header = () => {
     <header>
       <NavBar />
       <Social />
-      <Menu />
+      <BurgerMenu />
     </header>
   );
 };

@@ -1,0 +1,33 @@
+.gamesTitle {
+    display: flex;
+    flex-direction: row;
+    max-width: 55%;
+    margin-left: 2rem;
+    justify-content: space-between;
+    padding-top: 5%;
+}
+
+.chevron {
+    width: 24px;
+}
+
+.backMsg {
+    color: #000;
+}
+
+.backBtn {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (max-width: 375px) {
+    .gamesTitle {
+        max-width: 70%;
+        padding-top: 3rem;
+    }
+    .backMsg {
+        display: none;
+    }
+}

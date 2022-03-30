@@ -7,7 +7,17 @@ import marca from '../assets/marca.svg'
 const Home = () => {
   return (
     <div className='home-container'>
+      {/** TODO
+       *  
+       * create component Avatar for logo img
+       * 
+       */}
       <img src={logo} alt="Copa Games Logo" id="logo" />
+      {/** TODO
+       *  
+       * create component Welcome for div .info
+       * 
+       */}
       <div className='info'>
         <h1>Boas vindas a</h1>
         <img src={marca} alt="Marca Copa Games" id="marca" />
