@@ -2,15 +2,15 @@ import styles from "./Instructions.module.css";
 import { FormControl, InputLabel, Select, MenuItem } from "@mui/material";
 import { useDispatch, useSelector } from "react-redux";
 import { Link } from "react-router-dom";
-import { gamesActions } from "../../store/features/gamesSlice";
 import UIButton from "../ui/UIButton";
+import { getAmount } from "../../store/actions/gamesActions";
 
 const Instructions = () => {
   const dispatch = useDispatch();
   const amount = useSelector((state) => state.games.amount);
   const length = useSelector((state) => state.games.selectedGames.length);
   const handleChange = ({ target }) =>
-    dispatch(gamesActions.setAmount(target.value));
+    dispatch(getAmount(target.value));
   return (
     <div className={styles.container}>
       <h2>1. Select the amount of games:</h2>

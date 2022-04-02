@@ -1,10 +1,10 @@
 import Grid from "../ui/Grid";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
-import { gamesActions } from "../../store/features/gamesSlice";
 import fetchData from "../../services/api";
 import GameCard from "../GameCard";
 import UIButton from "../ui/UIButton";
+import { setGames, selectGame } from "../../store/actions/gamesActions";
 
 const GamesList = () => {
   const dispatch = useDispatch();
@@ -12,7 +12,7 @@ const GamesList = () => {
 
   const getData = async () => {
     const data = await fetchData();
-    dispatch(gamesActions.setAllGames(data));
+    dispatch(setGames(data));
   };
 
   useEffect(() => {
@@ -20,7 +20,7 @@ const GamesList = () => {
   });
 
   const handleSelect = (item) => {
-    dispatch(gamesActions.selectGame(item));
+    dispatch(selectGame(item));
   };
 
   return (
