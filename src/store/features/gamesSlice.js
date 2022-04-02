@@ -27,13 +27,14 @@ const gamesSlice = createSlice({
                 state.selectedGames = state.selectedGames.filter(g => g.id !== existingGame.id)
             }
         },
-        sortGames (state, action) {
+        sortGames (state) {
             const winners = sortGames(state.selectedGames)
             state.winner = winners[0]
             state.vice = winners[1]
         },
         startAgain (state) {
             state.selectedGames = []
+            state.amount = ''
         }
     }
 })

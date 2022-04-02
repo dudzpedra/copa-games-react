@@ -11,3 +11,9 @@ export const setGames = (games) => {
 export const selectGame = (game) => {
     return (dispatch) => dispatch(gamesActions.selectGame(game))
 }
+
+export const sortGames = () => {
+    return (dispatch) => dispatch(gamesActions.sortGames())
+}
+
+export const startOver = () => (dispatch) => dispatch(gamesActions.startAgain())

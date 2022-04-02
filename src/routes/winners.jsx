@@ -5,14 +5,14 @@ import star1 from "../assets/winner.svg";
 import star2 from "../assets/vice.svg";
 import UIButton from "../components/ui/UIButton";
 import { Link } from "react-router-dom";
-import { gamesActions } from "../store/features/gamesSlice";
+import { startOver } from "../store/actions/gamesActions";
 
 const Winners = () => {
   const winner = useSelector((state) => state.games.winner);
   const vice = useSelector((state) => state.games.vice);
   const dispatch = useDispatch()
 
-  const handleStart = () => dispatch(gamesActions.startAgain())
+  const handleStart = () => dispatch(startOver())
 
   return (
     <div className="winners-container">
